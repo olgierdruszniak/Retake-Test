@@ -89,7 +89,6 @@ public class DbService : IDbService
 
         try
         {
-            //sprawdzanie czy obiekty ktore sa dodawane juz istnieja badz nie
             command.Parameters.Clear();
             command.CommandText = "SELECT 1 FROM Artifact WHERE artifact_id = @ArtifactId;";
             command.Parameters.AddWithValue("@ArtifactId", request.Artifact.ArtifactId);
